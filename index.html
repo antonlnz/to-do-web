@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Lista de tareas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="columna">
+        <h1 aria-label="Título de la página">Título de la página</h1>
+        <form id="formulario">
+            <label for="tituloTarea">Título de la tarea:</label>
+            <input type="text" id="tituloTarea" name="tituloTarea">
+            <label for="descripcionTarea">Descripción de la tarea:</label>
+            <textarea id="descripcionTarea" name="descripcionTarea"></textarea>
+            <label for="fechaLimite">Fecha límite:</label>
+            <input type="date" id="fechaLimite" name="fechaLimite">
+            <button type="submit" aria-label="Enviar">Enviar</button>
+        </form>
+    </div>
+    <div class="columna">
+        <h2 id="tituloListTareas" aria-live="polite">Tareas Pendientes (0 de 0)</h2>
+        <div class="fila">
+            <div class="fila" id="filaNoCompletadas">
+                <label for="innerCheckbox">Marcar todas</label>
+                <input type="checkbox" id="innerCheckbox">
+            </div>
+            <button id="innerButtonNoCompletadas">Eliminar todas</button>
+        </div>
+        <div id="listaTareas" aria-live="polite">
+        </div>
+        <h2 id="tituloListTareasCompletadas" aria-live="polite">Tareas Completadas (0 de 0)</h2>
+        <div class="fila">
+            <div class="fila" id="filaCompletadas">
+                <label for="innerCheckbox2">Desmarcar todas</label>
+                <input type="checkbox" id="innerCheckbox2">
+            </div>
+            <button id="innerButtonCompletadas">Eliminar todas</button>
+        </div>
+        <div id="listaTareasCompletadas"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
